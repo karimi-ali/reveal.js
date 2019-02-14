@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title> talk by Sahil Loomba - 01.03.2019 </title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="reveal/css/reveal.min.css">
+		<link rel="stylesheet" href="pkgwtheme.css" id="theme">
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	<style>
+	.reveal .slides {
+ 	 	border: 0px solid black;
+    		min-height: 100%;
+    		width: 100%;
+    		height: 100%;
+	}
+        .reveal .slides .title{
+                border: 0px solid black;
+                min-height: 100%;
+                width: 100%;
+                height: 100%;
+		background-color: rgba(0,0,0,0.9);
+        }
+
+	.reveal .right_align {
+	 	position: fixed;
+		width:: 100%;
+    		bottom:70px;
+    	   	right:105px;
+   	   	font-size:0.4em
+	}
+	.reveal .footer {
+	  	position: fixed;
+		left: 0;
+		bottom: 0;
+  		width: 100%;
+  		background-color:;
+  		color: white;
+  		text-align: left;
+		font-size:0.5em;
+	}
+        .reveal .footer_right {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                background-color:;
+                color: white;
+                text-align: right;
+                font-size:0.5em;
+        }
+
+	</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			
+			<header style="position: absolute;bottom: 0px; left: 0px; z-index:500; font-size:100px;background-color: rgba(0,0,0,0.5)"></header>
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section id="title" data-background-video="file:///C:/Users/loombas/Documents/revealjs/images/humandataset_Trim.mp4" 
+					 data-background-video-loop data-background-video-muted class="title">
+					<img src="file:///C:/Users/loombas/Documents/revealjs/images/mpibr_logo.png"  height="50" width="100"
+						       style="position:fixed; bottom:0; right:0; display:block; border:none; z-index:1000000;"/>
+					<img src="file:///C:/Users/loombas/Documents/revealjs/images/minerva_logo.png"  height="60" width="60"
+                                                       style="position:fixed; bottom:0; left:0; display:block; border:none; z-index:1000000;"/> 
+					<img src="file:///C:/Users/loombas/Documents/revealjs/images/mhlab_logo.png"  height = "50" width="150" 
+						       style="position:fixed; bottom:0; right:42%; display:block; border:none; z-index:1000000;">
+
+					<h2><strong> Connectomics in primate cortex </strong></h2>
+					<small>
+						<p> <b>Sahil Loomba</b> </p>
+						<p>Department of Connectomics</p>
+	                        	        <p>Max Planck Institute for Brain Research</p>
+						<p><font color="#269BF7"> Friday Seminar 1.03.2019 </font> </p>
+					</small>
+				</section>
+
+				<section id="evolution">
+                                        <section data-background="file:///C:/Users/loombas/Documents/revealjs/images/brain_sizes.jpg" data-background-size="1000px 700px"
+                                                data-background-position="center" data-background-opacity="0.1">
+                                        <h3> Comparison along the evolutionary axis </h3>
+                                        </section>
+
+					<section data-background="file:///C:/Users/loombas/Documents/revealjs/images/brain_sizes.jpg" data-background-size="1000px 700px"
+						data-background-position="center" data-background-opacity="1" data-background-color="#000000">
+						<p class="right_align"> <span style="color:#F9DA9D">Brain mass </span> and 
+						<span style="color:#F79E78">total number of neurons </span> <sup>[1]</sup> </p>
+						<p class="footer"> [1] Adapted from "The human brain in numbers: a linearly scaled-up primate brain", S Herculano-Houzel -
+							Frontiers in human neuroscience 2009</p>
+					</section>
+					<section data-background="file:///C:/Users/loombas/Documents/revealjs/images/brain_sizes.jpg" data-background-size="1000px 700px"
+                                                data-background-position="center" data-background-opacity="0.1">
+						<p> Comparison of brain sizes and white matter densities </p>
+						<p class="fragment"> Bigger is better </p>
+						<p class="fragment"> Instruction vs Selection </p>
+						<p class="fragment"> Macro and Micro scale connectomics</p>
+						<br>
+					</section>
+					<section  data-background="file:///C:/Users/loombas/Documents/revealjs/images/evo_axis1.png" data-background-size="1000px 700px"
+						 data-background-position="center" data-background-opacity="1">
+					</section>
+					<section data-background="file:///C:/Users/loombas/Documents/revealjs/images/evo_axis1.png" data-background-size="1000px 700px"
+                                                data-background-position="center" data-background-opacity="0.1">
+						<img src="file:///C:/Users/loombas/Documents/revealjs/images/marmoset.png" 
+                                                       style="position:center; display:block; border:none; z-index:1000000;">
+						<p> Marmoset </p>
+					</section>
+ 					<section data-background="file:///C:/Users/loombas/Documents/revealjs/images/evo_axis2.png" 
+						data-background-size="1000px 700px" data-background-position="center" data-background-opacity="0.1">
+                                                <img src="file:///C:/Users/loombas/Documents/revealjs/images/macaque.png" 
+                                                       style="position:center; display:block; border:none; z-index:1000000;">
+						<p> Macaque </p>
+                                        </section>
+
+					 <section data-background="file:///C:/Users/loombas/Documents/revealjs/images/evo_axis3.png"
+                                                data-background-size="1000px 700px" data-background-position="center" data-background-opacity="1">
+                                        </section>
+
+				</section>
+
+				<section id="slide3">
+					<section>
+						<h3>Circuit principles across higher mammals</h3>
+					</section>
+					
+					<section data-background="file:///C:/Users/loombas/Documents/revealjs/images/wiring_logo.png" data-background-color="#ffffff"
+	                                                data-background-size="500px 500px" data-background-position="center" data-background-opacity="1">
+					</section>
+					<section data-background="file:///C:/Users/loombas/Documents/revealjs/images/wiring_logo.png"
+                                                        data-background-size="500px 500px" data-background-position="center" data-background-opacity="0.1">
+						 <span style="display: inline-block;" class="fragment fade-right"> Understanding the local-circuit 
+							 principles of wiring </span>
+						 <span style="display: inline-block;" class="fragment fade-right">Quantification of wiring precision of 
+							 well-established inhibitory circuits </span>
+						 <span style="display: inline-block;" class="fragment fade-right">Connectivity at subcellular level </span>
+					</section>
+				</section>
+
+				<section id="sbem">
+					<section>
+					<h3>Serial Block-face Scanning Electron Microscopy</h3>
+					<p class="footer">
+						W Denk, H Horstmann, Serial Block-Face Scanning Electron Microscopy to Reconstruct Three-Dimensional
+						Tissue Nanostructure. PLOS Biology 2004
+
+					</p>
+					</section>
+					<section data-background-video="file:///C:/Users/loombas/Documents/revealjs/images/sbem.mp4">
+						
+					</section>
+				</section>
+				<section id="alignment">
+					<section>
+						<h3> Alignment of datasets</h3>
+<!--					        <h4 class="footer_right">
+						Work with  <font color="#269BF7">Jakob Straehle </font>
+</h4> -->
+					</section>
+					<section style="text-align: left;">
+						<div style="width:50%;"> 
+							<p> Coarse alignment with SURF features </p>
+                                        	        <img src="file:///C:/Users/loombas/Documents/revealjs/images/align_surf.png" height="300" width=300"
+                                                       style="position:absolute; top:-30%;right:0; display:block; border:none; z-index:1000000;">
+						</div>
+						<div class="fragment" style="width:50%">
+                                                	<p> Sub-image alignment </p>
+                                                	<img src="file:///C:/Users/loombas/Documents/revealjs/images/align_subimg.png" height="300" width="300"
+                                                       style="position:absolute; bottom:-80%; right:0; display:block; border:none; z-index:1000000;">
+                                                </div>
+						<div class="footer">
+							<p>"SURF: Speeded Up Robust Features", Herbert Bay, Andreas Ess, Tinne Tuytelaars, Luc Van Gool.
+							Computer Vision and Image Understanding (CVIU), Vol. 110, No. 3, pp. 346–359, 2008 <p>
+						</div>
+	                                        <p style="position:absolute; bottom:-100%; right:0; display:block;">
+							<small>Work with  <font color="#269BF7">Jakob Straehle </font> </small>
+                                                </p>
+
+					</section>
+					<section style="text-align: left;">
+                                                <div style="width:50%;">
+                                                        <p> Coarse alignment with SURF features </p>
+							<p> Sub-image alignment </p>
+							<img src="file:///C:/Users/loombas/Documents/revealjs/images/align_em12.png" height="200" width=200"
+                                                       style="position:absolute; top:-20%;right:0; display:block; border:none; z-index:1000000;">
+							<img src="file:///C:/Users/loombas/Documents/revealjs/images/align_em11.png" height="200" width=200"
+                                                       style="position:absolute; top:-20%;right:25%; display:block; border:none; z-index:1000000;">
+							<img src="file:///C:/Users/loombas/Documents/revealjs/images/align_em22.png" height="200" width=200"
+                                                       style="position:absolute; bottom:-55%;right:0; display:block; border:none; z-index:1000000;">
+							<img src="file:///C:/Users/loombas/Documents/revealjs/images/align_em21.png" height="200" width=200"
+							style="position:absolute; bottom:-55%;right:25%; display:block; border:none; z-index:1000000;">
+							<h4 style="position:absolute; top:90%; right:50%;"> Y </h4>
+							<h4 style="position:absolute; top:-10%; right:50%;"> Y </h4>
+							<h4 style="position:absolute; top:-40%; right:10%;"> Z </h4>
+							<h4 style="position:absolute; top:-40%; right:35%;"> X </h4>
+                                                </div>
+                                                <p style="position:absolute; bottom:-90%; right:0;">
+                                                        <small>Work with  <font color="#269BF7">Jakob Straehle </font> </small>
+                                                </p>
+
+
+                                        </section>
+
+
+				</section>
+
+				<section id="conn_screening">
+                                        <section>
+                                        <h3> Connectomics screening of datasets</h3>
+                                        </section>
+					<section data-background-video="file:///C:/Users/loombas/Documents/revealjs/images/4datasets.mp4">
+						<div style="text-align: left;  position: fixed; left:-25%;bottom:25px; width:35%; font-size:20px">
+							<p> Human L4 MTL *1977 110x130x100 um<sup>3</sup> <font color="#269BF7"> Jakob Straehle </font> </p>
+							<p> Macaque L4 *7years 180x170x150 um<sup>3</sup> <font color="#269BF7"> Jakob Straehle </font> </p>
+
+						</div>
+						<div style="text-align: left;  position: relative; left:-25%;bottom:-150px; width:30%; font-size:20px">
+                                                        <p> Mouse L4 S1 P28  61x94x92 um<sup>3</sup> <font color="#269BF7">  Kevin Boergens </font></p>
+                                                        <p> Rat L4 S1 P28 88x68x118 um<sup>3</sup> <font color="#269BF7">  Roman Kostal </font> </p>
+                                                </div>
+
+                                        </section>
+				</section>
+
+				<section id="human">
+                                        <section data-background="file:///C:/Users/loombas/Documents/revealjs/images/humanL4.png" data-background-size="50%"
+                                                data-background-position="center" data-background-opacity="0.2"  data-background-color="#000000">
+					<h3> Human medial temporal lobe tissue SBEM dataset</h3>
+					<p>Female *1977 Encephalitis </p>
+					<p> Acquired by <font color="#269BF7"> <b> Jakob Straehle </b> </font> in collaboration with </p>
+					<p><font color="#269BF7"> H.S. Meyer </font> TU München </p>	
+					<p> <small> dataset size: 110x130x100um<sup>3</sup></small> </p>
+					<p> <small> voxel size: 11.24x11.24x28 nm<sup>3</sup> </small> <p>
+					<p class="footer"> The brain tissue sample was taken with full patient consent and with approval of the Ethics
+						committee of the Technical University Clinic Munich (Ethikvotum 184/16S) <p>
+					
+                                        </section>
+					<section data-background="file:///C:/Users/loombas/Documents/revealjs/images/humanL4.png" data-background-size="50%"
+                                                data-background-position="center" data-background-opacity="1"  data-background-color="#000000">
+					</section>
+                                        <section data-background-video="file:///C:/Users/loombas/Documents/revealjs/images/humandataset.mp4">
+                                        </section>
+                                </section>
+
+				<section id="mkL4">
+                                        <section data-background="file:///C:/Users/loombas/Documents/revealjs/images/macaqueL4.png" data-background-size="50%"
+                                                data-background-position="center" data-background-opacity="0.2" data-background-color="#000000">
+                                        <h3> Macaque S1 L4 SBEM dataset</h3>
+					<p> Macaque L4 *7years old </p>
+					<p> Acquired by <font color="#269BF7"> <b> Jakob Straehle </b> </font> in collaboration with </p>
+					<p> <font color="#269BF7"> C Mätz-Rensing </font>DPZ Göttingen </p>
+					<p> <small> dataset size: 180x170x150 um<sup>3</sup> </small> </p>
+					<p> <small> voxel size: 11.24x11.24x30 nm<sup>3</sup></small> </p>
+					</section>
+                                        <section data-background="file:///C:/Users/loombas/Documents/revealjs/images/macaqueL4.png" data-background-size="50%"
+                                                data-background-position="center" data-background-opacity="1"  data-background-color="#000000">
+                                        </section>
+                                        <section data-background-video="file:///C:/Users/loombas/Documents/revealjs/images/Mk1_F6_JS_SubI_v3_50sec.mp4">
+                                        </section>
+                                </section>
+
+				<section id="mkL23">
+					<section>
+                                        	<h3> Macaque S1 L2/3 dataset</h3>
+						<p class="footer">
+                                        	224x176x100 um<sup>3</sup>
+                                        	</p>
+                                        </section>
+                                        <section data-background-video="file:///C:/Users/loombas/Documents/revealjs/images/mkL23dataset.mp4">
+                                        </section>
+                                </section>
+
+				<section id="human_cells">
+					<section data-background="file:///C:/Users/loombas/Documents/revealjs/images/human_pyr_in.png" data-background-size="50%"
+                                                      data-background-position="center" data-background-opacity="0.9" data-background-color="#000000">
+                                                <h3 class="fragment fade-out"> Classification of Cell types in Human SBEM Dataset </h3>
+                                        </section>
+					<section>
+					<h2>Gallery of human pyramidal cells reconstructions</h2>
+					<iframe data-src="file:///C:/Users/loombas/Downloads/JS_ProgressReport_25_9_18\CellGalleries/H2_3_PyramidalCells.pdf" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1x solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+					</section>
+					<section>
+					<h2>Gallery of human interneurons reconstructions</h2>
+                                        <iframe data-src="file:///C:/Users/loombas/Downloads/JS_ProgressReport_25_9_18\CellGalleries/H2_3_Interneurons.pdf" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+					</section>
+				</section>
+				
+				<section id = "mk_recon">
+					<section  data-background="file:///C:/Users/loombas/Documents/revealjs/images/macaque_somata_v3.png" data-background-size="50%"
+                                                      data-background-position="center" data-background-opacity="0.9" data-background-color="#000000">
+						<h3 class="fragment fade-out"> Reconstructions in Macaque L4 dataset</h3>
+						<div class="fragment fade-in" style="text-align:right">
+							<p><font color="#873EA6">Pyramidal Cells </font> </p>
+							<p><font color="#FEFEFE">Interneurons</font> </p>
+							<p><font color="#FD9E40">Stellate cell</font> </p>
+							<p><font color="#4CA13F">Unclassified</font> </p>
+							<p style="position:absolute; bottom:-10%;left:20%;"> <small> 100um </small> </p>
+							<p class="footer"> Cell classification in Macaque dataset</p>
+							<p class="footer_right"> Work with Jakob Straehle </p>
+						</div>
+
+					</section>
+					<section  data-background="file:///C:/Users/loombas/Documents/revealjs/images/Mk1_F6_JS_SubI_v2.png" data-background-size="50%"
+                                                      data-background-position="center" data-background-opacity="1" data-background-color="#000000" 
+						      data-transition="fade-in">
+                                                <div style="text-align:left">
+                                                        <p style="position:fixed; bottom:12%;left:20%;"> <small> 100um </small> </p>
+							<p class="footer"> Skeleton recontructions without segmentation overlay </p>
+                                                </div>
+						<p class="footer_right"> Work with student annotators </p>
+
+
+                                        </section>
+				</section>
+
+				<section id="axon_types">
+					<section>
+						<h3> Classification of inhibitory and excitatory axons </h3>
+						</section>
+					<section data-background="file:///C:/Users/loombas/Documents/revealjs/images/axons_e_i_human.png" data-background-size="25%"
+                                                      data-background-position="center" data-background-opacity="1" data-background-color="#ffffff"> 
+						<div class="fragment fade-in">
+                                                       <img src="file:///C:/Users/loombas/Documents/revealjs/images/axons_e_i_amotta.png" 
+                                                       style="position:absolute;  top:-20%;right:25%; display:block; border:none; z-index:1000000;">
+						       <p class="footer"> <font color="#000000">Dense connectomic reconstruction in layer 4 of the somatosensory cortex,
+							       bioRxiv 2018 (under review at Nature). Motta, Manuel Berning, Kevin M. Boergens, Benedikt Staffler,
+							       Marcel Beining, Sahil Loomba, Christian Schramm, Philipp Hennig, Heiko Wissler, Moritz Helmstaedter </font> </p>
+						</div>
+
+					</section>
+
+				</section>
+
+				<section id="acknowledgements">
+					<h3> Acknowledgements</h3>
+					<p style="text-align: left">
+						Moritz Helmstaedter
+					</p>
+					<p style="text-align: left">
+                                                Jakob Straehle 	Benedikt Staffler Alessandro Motta Manuel Berning
+                                        </p>
+					<p style="text-align: left">
+                                                Anjali Gour	Martin Schmidt	Ali Karimi	
+						Meike Schurr	Florian Drawitsch	Abdelrahman Khalifa
+						
+                                        </p>
+					<p> connectomics department </p>
+
+				</section>
+
+                                <section id="all_datasets">
+                                        <section>
+                                        <h3> SBEM datasets along evolutionary axis</h3>
+                                        </section>
+                                        <section data-background="file:///C:/Users/loombas/Documents/revealjs/images/alldatasets.png"  data-background-color="#ffffff"
+                                                        data-background-size="50%" data-background-position="center" data-background-opacity="1">
+                                        <p class="footer">
+                                        <font color="#000000">SBEM datasets along evolutionary axis undergoing analysis </font>
+                                        </p>
+                                        </section>
+                                </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chalkboard/chalkboard.js' },
+					{ src: 'plugin/menu/menu.js' },
+					{ src: 'plugin/elapsed-time-bar/elapsed-time-bar.js'}
+					//{ src: 'plugin/toolbar/toolbar.js' } 
+				],
+				toolbar: {
+					position: 'bottom',
+					fullscreen: true,
+					overview: true,
+					pause: true,
+					notes: true,
+					help: false,
+					captureMenu: true,
+					capturePlaybackControl: true,
+					loadIcons: true
+				},
+				menu: {
+					side: 'left',
+					width: 'normal',
+					numbers: true,
+					titleSelector: 'h1, h2, h3, h4, h5, h6',
+					useTextContentForMissingTitles: false,
+					hideMissingTitles: false,
+					markers: true,
+					custom: false,
+					themes: true,
+				},
+					allottedTime: 30 * 60 * 1000, // 3 minutes
+					progressBarHeight: 3,
+					barColor: 'rgb(150,0,0)',
+					pausedBarColor: 'rgba(200,0,0,.6)',
+				keyboard: {
+					    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+					    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+					    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+					     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+					    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+					// custom shortcuts for me
+					    13: 'next', // go to the next slide when the ENTER key is pressed
+					    48: function() {document.getElementById('theme').setAttribute('href','css/theme/black.css'); return true;},
+	  				   49: function() {document.getElementById('theme').setAttribute('href','css/theme/white.css'); return true;},
+					   50: function() {document.getElementById('theme').setAttribute('href','css/theme/night.css'); return true;},
+					   51: function() {document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return true;},
+					   52: function() {document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return true;},
+					   53: function() {document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return true;},
+				},
+
+			});
+		</script>
+
+	</body>
+</html>
